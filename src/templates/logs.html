@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Logs</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .log { border-bottom: 1px solid #ccc; padding: 5px 0; }
+    .time { color: gray; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h1>Chat Logs</h1>
+  {% for log in logs %}
+    <div class="log">
+      <div class="time">{{ log.time }}</div>
+      <strong>{{ log.sender }}:</strong> {{ log.message }}
+    </div>
+  {% endfor %}
+</body>
+</html>
